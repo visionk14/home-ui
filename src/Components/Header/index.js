@@ -5,6 +5,7 @@ import { Karbon } from '../../styles/core'
 import { Button } from '@react-core/button'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
+import { Languageswitcher } from './Languageswitcher'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
 
@@ -43,6 +44,7 @@ const Header = ({ sections = [] }) => (
                             />
                           </a>
                         </div>
+                        <Languageswitcher />
                         <div className="links__area">
                           <div>
                             <ul>
@@ -76,7 +78,7 @@ const Header = ({ sections = [] }) => (
                             onClick={isMobile ? onChange : DownloadWhitepaper}
                           />
 
-                          <div className={isMobile ? 'hide' : ''}> 
+                          <div className={isMobile ? 'hide' : ''}>
                             <GithubCorner
                               href="https://github.com/karbon14"
                               target="_blank"
